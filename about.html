@@ -2,32 +2,77 @@
 <html>
 <head>
 	<title>About Me</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<style>
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 		body {
 			background-color: black;
 			color: white;
-			font-family: serif;
 		}
 		.container {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 100vh; /* This will make the container take up the full height of the viewport */
+			
 		}
 		.box {
-			background-color: transparent; /* This will make the box invisible */
-			padding: 20px;
+			background-color: transparent;
+			padding: 170px;
+		}
+		h1 {
+			text-align: left;
+			font-size: 120px;
+			font-family: 'Roboto', sans-serif;
+		}
+		p {
+			text-align: left;
+			font-size: 30px;
+			font-family: 'Playfair Display', serif;
+		}
+		.link-back {
+			display: flex;
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			font-size: 30px;
+			font-family: 'Roboto', sans-serif;
+		}
+		.link-back a {
+			color: white;
+		}
+		.contacts{
+			display: flex;
+			justify-content: center;
+			gap: 40px;
+			font-size: 32px;
+			padding: 50px;
+		}
+		.contacts i {
+			color: white;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
+		<div class="link-back">
+			<a href="index.html"> < back </a>
+		</div>
 		<div class="box">
 			<h1>About Me</h1>
-			<p>My name is [Your Name] and I am a [Your Profession].</p>
-			<p>I have a degree in [Your Degree] from [Your University].</p>
-			<p>I have a passion for [Your Passion] and have been [Your Experience] in this field.</p>
-			<p>Feel free to contact me at [Your Email] for any inquiries or collaborations.</p>
+			<p>My name is Shahran Kurnia Ramadhan and I am an aspiring game designer and game writer.</p>
+			<p>I am currently studying Computer Science in Universitas Gadjah Mada, Yogyakarta, Indonesia.</p>
+			<p>As a beginner game designer, I am eager to learn and grow in this field. I have a foundation in design principles and am capable of working with software like Unity to create basic prototypes and concepts. However, I understand that there is always more to learn and am committed to continuing my education and expanding my skills.</p>
+			<p>As a beginner writer, I have a strong passion for crafting intricate and detailed worlds, and love to explore the lore and history that give these places depth and personality. While world building is my main focus, I am also capable (albeit with less experience) at crafting engaging narration and dynamic dialogue that help bring stories to life.</p>
+			<p>Feel free to contact me through my email or Discord for any inquiries, I am currently open for work to any type of game or fictional writing related project.</p>
+			<div class="contacts">
+				<a href="mailto:sk.ramadhan@gmail.com"><i class="fas fa-envelope"></i></a>
+				<a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
+			</div>
 		</div>
 	</div>
 </body>
