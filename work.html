@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>Under Construction</title>
-	<link rel="shortcut icon" type="image/x-icon" href="icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="icon2.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<style>
 		@import url(
 			'https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap');
@@ -20,27 +22,51 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			height: 100vh;
 		}
 		h1 {
-			font-size: 120px;
+			font-size: 12vh;
 			font-family: 'Zilla Slab Highlight', cursive;
 		}
 		p {
-			font-size: 30px;
+			font-size: 2vh;
 			font-family: 'Zilla Slab', serif;
 		}
 		.link-back {
 			display: flex;
 			position: absolute;
-			left: 20px;
-			top: 20px;
-			font-size: 30px;
+			left: 2vh;
+			top: 2vh;
+			font-size: 3vh;
 			font-family: 'Zilla Slab Highlight', cursive;
 		}
 		.link-back a {
 			color: white;
 		}
+		.contacts{
+			display: flex;
+			justify-content: center;
+			gap: 4vh;
+			font-size: 3.2vh;
+			padding: 5vh;
+		}
+		.contacts i {
+			color: white;
+		}
+		.grid {
+			display: grid; /* This will create a grid layout */
+			grid-template-columns: repeat(3, 1fr); /* This will create a 3-column grid */
+			grid-gap: 4vh; /* This will add a gap of 20 pixels between the grid items */
+			justify-content: center; /* This will center the grid on the page */
+		}
+		.grid-item {
+			border: 0.5vh solid white;
+			text-align: center;
+			padding: 2.5vh;
+		}
+		img {
+			width: 25vh;
+			height: auto;
+		} 
 	</style>
 </head>
 <body>
@@ -48,8 +74,49 @@
 		<div class="link-back">
 			<a href="index.html"> < back </a>
 		</div>
-		<h1>Under Construction</h1>
-		<p>Please check back later</p>
+		<h1> My Work </h1>
+		<div class="grid">
+			<div class="grid-item">
+				<a href="https://restigo12.itch.io/overkill-express">
+					<img src="overkill_express.jpg" alt="Overkill Express" title="GJ+ 2022 Incubation Winner Nominee">
+				</a>
+				<p> Game Designer </p>
+				<p> GJ+ 2022 Incubation Winner Nominee </p>
+			</div>
+			<div class="grid-item">
+				<a href="https://omahti.itch.io/diceboys-adventure">
+					<img src="diceboy.png" alt="Diceboy's Adventure" title="GMTK Game Jam 2022 Submission">
+				</a>
+				<p> Game Designer, UI Artist (partial) </p>
+				<p> GMTK Game Jam 2022 Submission </p>
+			</div>
+			<div class="grid-item">
+				<a href="https://chamiira.itch.io/cambrian-explosion">
+					<img src="cambrian.png" alt="Cambrian Explosion" title="IGSI Game Jam 2022 Submission">
+				</a>
+				<p> Game Designer, UI Artist </p>
+				<p> IGSI Game Jam 2022 Submission </p>
+			</div>
+			<div class="grid-item">
+				<a href="https://dreizehn13gim.itch.io/the-one">
+					<img src="theone.png" alt="The One" title="GIM JAM 2022">
+				</a>
+				<p> Game Designer </p>
+				<p> GIM JAM 2022 Submission </p>
+			</div>
+			<div class="grid-item">
+				<a href="https://drive.google.com/drive/folders/1KIOn5-iW5DG1sHaidXSCT9OW4b86Y-zo?usp=sharing">
+					<img src="miara.png" alt="Miara" title="1st Place Mile Zero Project Game-A-Thon">
+				</a>
+				<p> Game Designer, Visual Artist (partial) </p>
+				<p> 1st Place Mile Zero Project Game-A-Thon 2022</p>
+			</div>
+		</div>
+		<div class="contacts">
+			<a href="mailto:sk.ramadhan@gmail.com"><i class="fas fa-envelope"></i></a>
+			<a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
+			<a href="https://www.linkedin.com/in/shahran-ramadhan-b03171233/"><i class="fab fa-linkedin-in"></i></a>
+		</div>
 	</div>
 </body>
 </html>

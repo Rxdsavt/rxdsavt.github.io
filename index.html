@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shahran's Page</title>
-	<link rel="shortcut icon" type="image/x-icon" href="icon.png">
+	<title>Rxdsavt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="icon2.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<style>
 		@import url(
 			'https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap');
@@ -15,24 +17,24 @@
 		}
 		h1 {
 			text-align: left;
-			font-size: 120px;
+			font-size: 12vh;
 			font-family: 'Zilla Slab Highlight', cursive;
 		}
 		.button {
 			display: inline-block;
-			padding: 10px 20px;
-			border: 1px solid white;
+			padding: 1vh 2vh;
+			border: 0.1vh solid white;
 			color: black;
 			background-color: white;
 			text-decoration: none;
-			height: 70px;
-			line-height: 70px;
-			font-size: 40px;
-			border-radius: 10px;
+			height: 7vh;
+			line-height: 7vh;
+			font-size: 4vh;
+			border-radius: 1vh;
 			font-family: 'Zilla Slab', serif;
 		}
 		.button:hover {
-			background-color: blue;
+			background-color: black;
 			color: white;
 		}
 		.container {
@@ -44,16 +46,40 @@
 		}
 		.button-container {
 			display: flex;
-			gap: 75px;
+			gap: 7.5vh;
+		}
+		p {
+			font-size: 3vh;
+			font-family: 'Zilla Slab', serif;
+		}
+		.contacts{
+			display: flex;
+			justify-content: center;
+			gap: 4vh;
+			font-size: 3.2vh;
+			padding: 5vh;
+		}
+		.contacts i {
+			color: white;
+		}
+		img {
+			width: 25.6vh;
+			height: 25.6vh;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>Shahran's Page</h1>
+		<img src="icon.png" alt="My Icon">
+		<h1>RXDSAVT</h1>
 		<div class="button-container">
 			<a href="about.html" class="button">About Me</a>
 			<a href="work.html" class="button">My Work</a>
+		</div>
+		<div class="contacts">
+			<a href="mailto:sk.ramadhan@gmail.com"><i class="fas fa-envelope"></i></a>
+			<a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
+			<a href="https://www.linkedin.com/in/shahran-ramadhan-b03171233/"><i class="fab fa-linkedin-in"></i></a>
 		</div>
 	</div>
 </body>
