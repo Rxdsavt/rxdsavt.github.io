@@ -1,10 +1,10 @@
 # Shahran's Personal/Portofolio Website
 
 ## EN:
-I'm just learning HTML and CSS so the code will be very scuffed and the website is not responsive. Please be patient and be mindful if you decide to open the code file. If anyone is able and willing to help me improve the code and help develop this website, I would really appreciate it.
+Finally make this website using Tailwind. Might not be the most beautiful website, but I am proud of it.
 
 ## ID:
-Saya baru belajar HTML dan CSS jadinya kodenya bakal sangat *scuffed* dan websitenya juga belum *responsive*. Mohon bersabar dan harap maklum kalau memutuskan untuk ngebuka file kodenya. Kalau ada yang bisa dan mau membantu saya dalam memperbaiki kode dan membantu mengembangkan website ini, saya sangat menghargainya.
+Akhirnya bikin website ini pake Tailwind juga. Mungkin gak sebagus yang diharapkan, namun sudah cukup membanggakan.
 
 ## Contact
 Discord: rxdsavt#1233
