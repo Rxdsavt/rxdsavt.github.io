@@ -1,177 +1,143 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Work</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/icon3.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap");
-      body {
-        background-color: black;
-        color: white;
-        font-family: serif;
-        text-align: center;
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      h1 {
-        font-size: 12vh;
-        font-family: "Zilla Slab Highlight", cursive;
-      }
-      p {
-        font-size: 2vh;
-        font-family: "Zilla Slab", serif;
-      }
-      .link-back {
-        display: flex;
-        position: absolute;
-        left: 2vh;
-        top: 2vh;
-        font-size: 3vh;
-        font-family: "Zilla Slab Highlight", cursive;
-      }
-      .link-back a {
-        color: white;
-      }
-      .contacts {
-        display: flex;
-        justify-content: center;
-        gap: 4vh;
-        font-size: 3.2vh;
-        padding: 5vh;
-      }
-      .contacts i {
-        color: white;
-      }
-      .grid {
-        display: grid; /* This will create a grid layout */
-        grid-template-columns: repeat(
-          3,
-          1fr
-        ); /* This will create a 3-column grid */
-        grid-gap: 4vh; /* This will add a gap of 20 pixels between the grid items */
-        justify-content: center; /* This will center the grid on the page */
-      }
-      .grid-item {
-        border: 0.5vh solid white;
-        text-align: center;
-        padding: 2.5vh;
-      }
-      img {
-        width: 25vh;
-        height: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="link-back">
-        <a href="index.html"> < back </a>
-      </div>
-      <h1>My Work</h1>
-      <div class="grid">
-        <div class="grid-item">
-          <a href="https://restigo12.itch.io/overkill-express">
-            <img
-              src="images/overkill_express.jpg"
-              alt="Overkill Express"
-              title="GJ+ 2022 Incubation Winner Nominee"
-            />
-          </a>
-          <p>Game Designer</p>
-          <p>GJ+ 2022 Incubation Winner Nominee</p>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon3.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Work Page</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    img {
+        border: 0.2vh solid white;
+    }
+    .custom-padding {
+        padding-top: 5rem;
+    }
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .group:hover .image-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  <div class="container mx-auto py-8 px-4 custom-padding">
+    <a href="index.html" class="block mb-8">
+      <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black border-2 border-white font-bold py-2 px-4 rounded">
+        Back
+      </button>
+    </a>
+    <h1 class="text-7xl font-bold text-center mb-24">My Work</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mb-16">
+      <a href="https://restigo12.itch.io/overkill-express" class="group">
+        <div class="relative">
+          <img src="images\overkill_express.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">Overkill Express</h2>
+          </div>
         </div>
-        <div class="grid-item">
-          <a href="https://omahti.itch.io/diceboys-adventure">
-            <img
-              src="images/diceboy.png"
-              alt="Diceboy's Adventure"
-              title="GMTK Game Jam 2022 Submission"
-            />
-          </a>
-          <p>Game Designer, UI Artist (partial)</p>
-          <p>GMTK Game Jam 2022 Submission</p>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Game Designer</p>
+          <p class="text-lg">GJ+ 2022 Incubation Winner Nominee</p>
         </div>
-        <div class="grid-item">
-          <a href="https://chamiira.itch.io/cambrian-explosion">
-            <img
-              src="images/cambrian.png"
-              alt="Cambrian Explosion"
-              title="IGSI Game Jam 2022 Submission"
-            />
-          </a>
-          <p>Game Designer, UI Artist</p>
-          <p>IGSI Game Jam 2022 Submission</p>
+      </a>
+      <a href="https://omahti.itch.io/diceboys-adventure" class="group">
+        <div class="relative">
+          <img src="images\diceboy.png" alt="Project 2" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">Diceboy</h2>
+          </div>
         </div>
-        <div class="grid-item">
-          <a href="https://dreizehn13gim.itch.io/the-one">
-            <img src="images/theone.png" alt="The One" title="GIM JAM 2022" />
-          </a>
-          <p>Game Designer</p>
-          <p>GIM JAM 2022 Submission</p>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Game Designer, UI Artist</p>
+          <p class="text-lg">GMTK Game Jam 2022 Submission</p>
         </div>
-        <div class="grid-item">
-          <a
-            href="https://drive.google.com/drive/folders/1KIOn5-iW5DG1sHaidXSCT9OW4b86Y-zo?usp=sharing"
-          >
-            <img
-              src="images/miara.png"
-              alt="Miara"
-              title="1st Place Mile Zero Project Game-A-Thon"
-            />
-          </a>
-          <p>Game Designer, Visual Artist (partial)</p>
-          <p>1st Place Mile Zero Project Game-A-Thon 2022</p>
+      </a>
+      <a href="https://chamiira.itch.io/cambrian-explosion" class="group">
+        <div class="relative">
+          <img src="images\cambrian.png" alt="Project 3" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">Cambrian Explosion</h2>
+          </div>
         </div>
-        <div class="grid-item">
-          <a
-            href="https://makotoichinose.itch.io/hydrogen"
-          >
-            <img
-              src="images/ggj2023.png"
-              alt="Stay Hydrated"
-              title="Global Game Jam 2023"
-            />
-          </a>
-          <p>Visual Artist</p>
-          <p>Global Game Jam 2023 Entry</p>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Game Designer, UI Artist</p>
+          <p class="text-lg">IGGI Game Jam 2022 Submission</p>
         </div>
-        <div class="grid-item">
-          <a
-            href="https://sphenicpotato.itch.io/yolk-and-lele-chan"
-          >
-            <img
-              src="images/yolk.png"
-              alt="Yolk and Lele-chan"
-              title="Level99 Game Jam"
-            />
-          </a>
-          <p>Game Designer</p>
-          <p>Level99 Game Jam 2023 Entry</p>
+      </a>
+      <a href="https://dreizehn13gim.itch.io/the-one" class="group">
+        <div class="relative">
+          <img src="images\theone.png" alt="Project 3" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">The One</h2>
+          </div>
         </div>
-      </div>
-      <div class="contacts">
-        <a href="https://discord.com/users/301304618456055808"
-          ><i class="fab fa-discord"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/shahran-ramadhan-b03171233/"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-      </div>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Game Designer</p>
+          <p class="text-lg">GIM JAM 2022 Submission</p>
+        </div>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1KIOn5-iW5DG1sHaidXSCT9OW4b86Y-zo" class="group">
+        <div class="relative">
+          <img src="images\miara.png" alt="Project 3" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">Miara</h2>
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Game Designer, Visual Artist</p>
+          <p class="text-lg"> 1st Place Mile Zero Project Game-A-Thon 2022</p>
+        </div>
+      </a>
+      <a href="https://makotoichinose.itch.io/hydrogen" class="group">
+        <div class="relative">
+          <img src="images\ggj2023.png" alt="Project 3" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">Stay Hydrated</h2>
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Visual Artist</p>
+          <p class="text-lg"> Global Game Jam 2023 Submission </p>
+        </div>
+      </a>
+      <a href="https://sphenicpotato.itch.io/yolk-and-lele-chan" class="group">
+        <div class="relative">
+          <img src="images\yolk.png" alt="Project 3" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 class="text-2xl font-bold text-white">Yolk and Lele-chan</h2>
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">Game Designer</p>
+          <p class="text-lg"> Level99 Game Jam 2023 Submission </p>
+        </div>
+      </a>
     </div>
-  </body>
+    <div class="flex justify-center space-x-10 text-4xl">
+        <a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
+        <a href="https://www.linkedin.com/in/shahran-ramadhan-b03171233/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</body>
+
 </html>

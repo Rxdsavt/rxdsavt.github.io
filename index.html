@@ -1,86 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Rxdsavt</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/x-icon" href="images/icon3.jpg">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<style>
-		@import url(
-			'https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap');
-		body {
-			background-color: black;
-			color: white;
-		}
-		h1 {
-			text-align: left;
-			font-size: 12vh;
-			font-family: 'Zilla Slab Highlight', cursive;
-		}
-		.button {
-			display: inline-block;
-			padding: 1vh 2vh;
-			border: 0.1vh solid white;
-			color: black;
-			background-color: white;
-			text-decoration: none;
-			height: 7vh;
-			line-height: 7vh;
-			font-size: 4vh;
-			border-radius: 1vh;
-			font-family: 'Zilla Slab', serif;
-		}
-		.button:hover {
-			background-color: black;
-			color: white;
-		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-		}
-		.button-container {
-			display: flex;
-			gap: 7.5vh;
-		}
-		p {
-			font-size: 3vh;
-			font-family: 'Zilla Slab', serif;
-		}
-		.contacts{
-			display: flex;
-			justify-content: center;
-			gap: 4vh;
-			font-size: 3.2vh;
-			padding: 5vh;
-		}
-		.contacts i {
-			color: white;
-		}
-		img {
-			width: 30vh;
-			height: 30vh;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon3.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>RXDSAVT</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    img {
 			border: 0.2vh solid white;
 		}
-	</style>
+    .custom-button {
+      width: 250px;
+    }
+  </style>
 </head>
-<body>
-	<div class="container">
-		<img src="images/icon3.jpg" alt="My Icon">
-		<h1>RXDSAVT</h1>
-		<div class="button-container">
-			<a href="about.html" class="button">About Me</a>
-			<a href="work.html" class="button">My Work</a>
-		</div>
-		<div class="contacts">
-			<a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
+
+<body class="flex items-center justify-center bg-black text-white">
+  <div class="text-center">
+    <img src="images\icon3.jpg" alt="Logo" class="mx-auto mb-12 w-60">
+    <h1 class="text-6xl font-bold mb-12"> RXDSAVT </h1>
+    <div class="flex justify-center mb-12 space-x-8">
+      <a href="about.html">
+        <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black text-2xl border-2 border-white font-bold py-6 px-10 mr-2 rounded custom-button">
+          About Me
+        </button>
+      </a>
+      <a href="work.html">  
+        <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black text-2xl border-2 border-white font-bold py-6 px-10 mr-2 rounded custom-button">
+          My Work
+        </button>
+      </a>
+    </div>
+    <div class="flex justify-center mb-12 space-x-8">
+      <a href="deconstruct.html">
+        <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black text-2xl border-2 border-white font-bold py-6 px-10 mr-2 rounded custom-button">
+          Deconstruct
+        </button>
+      </a>
+      <a href="gdd.html">
+        <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black text-2xl border-2 border-white font-bold py-6 px-10 mr-2 rounded custom-button">
+          Collection
+        </button>
+      </a>
+    </div>
+    <div class="flex justify-center space-x-10 text-4xl">
+      <a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
 			<a href="https://www.linkedin.com/in/shahran-ramadhan-b03171233/"><i class="fab fa-linkedin-in"></i></a>
-		</div>
-	</div>
+    </div>
+  </div>
 </body>
+
 </html>
