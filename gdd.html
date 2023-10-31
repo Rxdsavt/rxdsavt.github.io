@@ -6,16 +6,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="images/icon3.jpg">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Under Construction</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Plamo Display</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    img {
+        border: 0.2vh solid white;
+    }
+    .custom-padding {
+        padding-top: 5rem;
+    }
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .group:hover .image-overlay {
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body class="bg-black flex flex-col items-center justify-center h-screen">
-  <h1 class="text-5xl sm:text-7xl md:text-9xl text-red-500 text-center mb-10 font-bold">UNDER CONSTRUCTION</h1>
-  <a href="index.html" class="mb-10">
-    <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black text-2xl border-2 border-white font-bold py-2 px-4 mr-2 rounded">
-      GO BACK 
-    </button>
-  </a>
+<body class="bg-black text-white">
+  <div class="container mx-auto py-8 px-4 custom-padding">
+    <a href="index.html" class="block mb-8">
+      <button class="bg-white hover:bg-black hover:text-white hover:border-white text-black border-2 border-white font-bold py-2 px-4 rounded">
+        Back
+      </button>
+    </a>
+    <h1 class="text-7xl font-bold text-center mb-24">My Work</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mb-16">
+      <a href="" class="group">
+        <div class="relative">
+          <img src="images\september2023.jpg" alt="September 2023 Display" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+        </div>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">September 2023</p>
+          <p class="text-lg">Xi Gundam, Gundam Calibarn</p>
+        </div>
+      </a>
+      <a href="" class="group">
+        <div class="relative">
+          <img src="images\october2023" alt="October 2023 Display" class="w-full h-auto rounded-lg">
+          <div class="image-overlay"></div>
+        </div>
+        <div class="text-center mt-2">
+          <p class="text-lg font-bold">October 2023</p>
+          <p class="text-lg">30MS Rishetta, Gilbow, Daisy Ogre, Xi Gundam</p>
+        </div>
+      </a>
+    </div>
+    <div class="flex justify-center space-x-10 text-4xl">
+        <a href="https://discord.com/users/301304618456055808"><i class="fab fa-discord"></i></a>
+        <a href="https://www.linkedin.com/in/shahran-ramadhan-b03171233/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
 </body>
 
 </html>
