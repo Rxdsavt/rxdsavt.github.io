@@ -127,16 +127,14 @@ main h2 {
 .story-list {
     flex: 1;
     min-width: 200px;
-    /* ADDED: These two lines create the scrollable list */
-    max-height: 400px; /* Set a maximum height */
-    overflow-y: auto;  /* Add a vertical scrollbar only when needed */
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .story-list ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* ADDED: A little padding so the scrollbar doesn't touch the text */
     padding-right: 10px;
 }
 
@@ -166,9 +164,16 @@ main h2 {
     color: #222;
 }
 
+/* ADDED: Controls paragraph spacing inside the story view */
+.story-view p {
+    margin-top: 0;
+    margin-bottom: 0.2em; /* Adjust this value to increase/decrease spacing */
+}
+
+
 /* NEW: UPDATES SECTION STYLING */
 #updates h2 {
-    margin-top: 60px; /* More space before this section */
+    margin-top: 60px;
 }
 
 #commit-history {
@@ -183,11 +188,10 @@ main h2 {
     position: relative;
 }
 
-/* The timeline circle */
 #commit-history li::before {
     content: '';
     position: absolute;
-    left: -9px; /* ( (14px circle width / 2) + 2px border width ) */
+    left: -9px;
     top: 22px;
     width: 14px;
     height: 14px;

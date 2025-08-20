@@ -1,5 +1,9 @@
+// THIS IS THE ULTIMATE TEST. If you don't see this message, the file is not being loaded.
+console.log("script.js file has been loaded and is running!");
+
 // Wait for the entire page content to load
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOMContentLoaded event fired. The page is ready.");
 
     // --- Function for the Writings Page ---
     function handleWritingsPage() {
@@ -12,12 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.preventDefault();
                 const sourceFile = this.getAttribute('data-source');
                 storyContent.innerHTML = '<p>Loading story...</p>';
+                
                 fetch(sourceFile)
                     .then(response => {
                         if (!response.ok) throw new Error(`File not found.`);
                         return response.text();
                     })
-                    .then(text => { storyContent.textContent = text; })
+                    .then(markdownText => {
+                        // UPDATED: Convert Markdown to HTML using marked.js
+                        storyContent.innerHTML = marked.parse(markdownText);
+                    })
                     .catch(error => {
                         console.error('Error fetching the story:', error);
                         storyContent.innerHTML = `<p style="color: red;">Failed to load story. ${error.message}</p>`;
@@ -31,27 +39,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const commitList = document.getElementById('commit-history');
         if (!commitList) return;
 
-        const username = 'rxdsavt'; // Your lowercase username
-        const repo = 'rxdsavt.github.io'; // Your repository name
-        const branch = 'gh-pages'; // <-- THE IMPORTANT FIX IS HERE
+        const username = 'rxdsavt';
+        const repo = 'rxdsavt.github.io';
+        const branch = 'gh-pages';
 
-        // The URL now includes the specific branch to get commits from
         const apiUrl = `https://api.github.com/repos/${username}/${repo}/commits?sha=${branch}`;
         
-        console.log("Fetching commits from:", apiUrl); // This will now show the correct URL
-
         fetch(apiUrl)
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
-                }
+                if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
                 return response.json();
             })
             .then(commits => {
-                console.log("GitHub API Response:", commits);
-
                 if (commits && commits.length > 0) {
-                    commitList.innerHTML = ''; // Clear the "Loading..." message
+                    commitList.innerHTML = '';
+                    // Display the latest 2 commits
                     for (let i = 0; i < commits.length && i < 2; i++) {
                         const commit = commits[i];
                         const commitMessage = commit.commit.message.split('\n')[0];
