@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">Main</a>
+                <a href="projects.html">Projects</a>
+                <a href="writings.html" class="active">Writings</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Stories</h1>
+            <p class="page-description">Fuck ass story I've made when I am bored.</p>
+
+            <div class="writing-layout">
+                <aside class="story-list">
+                    <h2>Story Lists</h2>
+                    <ul>
+                        <!-- 
+                            PENTING: Atribut 'data-source' harus menunjuk ke path file .txt yang benar.
+                            Contoh: 'stories/cerita_pertama.txt'
+                        -->
+                        <li><a href="#" class="story-link" data-source="stories/atest.txt">A Test</a></li>
+                        <!-- Tambahkan judul cerita lain di sini -->
+                    </ul>
+                </aside>
+                
+                <article id="story-content" class="story-view">
+                    <p>Choose a story to read them. Duh.</p>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Rxdsavt. Did you know that I am somewhat mentally unstable?</p>
+        </footer>
+    </div>
+
+    <!-- Hubungkan file JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

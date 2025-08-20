@@ -1,0 +1,190 @@
+/* Pengaturan Dasar dan Font */
+body {
+    /* MENGGANTI FONT UTAMA KE COURIER PRIME */
+    font-family: 'Courier Prime', monospace;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Kontainer Utama */
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header dan Navigasi */
+header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a.active {
+    color: #000;
+    border-bottom-color: #333;
+}
+
+/* Konten Utama */
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.page-description {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Halaman Proyek - Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 15px 15px 5px 15px;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    margin: 0 15px 15px;
+    color: #555;
+}
+
+.project-card .project-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: -5px;
+}
+
+/* Halaman Tulisan */
+.writing-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.story-list {
+    flex: 1;
+    min-width: 200px;
+}
+
+.story-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.story-list li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.story-list li a:hover {
+    background-color: #f0f0f0;
+}
+
+.story-view {
+    flex: 3;
+    min-width: 300px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px 30px;
+    min-height: 300px;
+    white-space: pre-wrap;
+    /* MENGGANTI FONT CERITA KE TIMES NEW ROMAN */
+    font-family: 'Times New Roman', Times, serif;
+    color: #222;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    main h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        gap: 20px;
+        justify-content: center;
+    }
+}
