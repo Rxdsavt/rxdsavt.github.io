@@ -127,12 +127,17 @@ main h2 {
 .story-list {
     flex: 1;
     min-width: 200px;
+    /* ADDED: These two lines create the scrollable list */
+    max-height: 400px; /* Set a maximum height */
+    overflow-y: auto;  /* Add a vertical scrollbar only when needed */
 }
 
 .story-list ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    /* ADDED: A little padding so the scrollbar doesn't touch the text */
+    padding-right: 10px;
 }
 
 .story-list li a {
