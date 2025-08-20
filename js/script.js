@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!commitList) return; // Exit if the commit list element isn't on this page
 
         // --- CONFIGURATION: CHANGE THESE VALUES ---
-        const username = 'Rxdsavt'; // <-- Replace with your GitHub username
+        const username = 'rxdsavt'; // <-- Replace with your GitHub username
         const repo = 'rxdsavt.github.io'; // <-- Replace with your repository name
         // -----------------------------------------
 
-        const apiUrl = `https://api.github.com/repos/Rxdsavt/rxdsavt.github.io/commits`;
+        const apiUrl = `https://api.github.com/repos/${username}/${repo}/commits`;
 
         fetch(apiUrl)
             .then(response => {
