@@ -1,46 +1,90 @@
-// Menunggu hingga seluruh konten halaman dimuat
+// Wait for the entire page content to load
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Hanya jalankan kode ini jika kita berada di halaman tulisan
-    // Kita cek dengan keberadaan elemen .story-list
-    const storyList = document.querySelector('.story-list');
-    if (!storyList) {
-        return; // Keluar dari fungsi jika bukan halaman tulisan
+    // --- Function for the Writings Page ---
+    function handleWritingsPage() {
+        const storyLinks = document.querySelectorAll('.story-link');
+        const storyContent = document.getElementById('story-content');
+
+        if (!storyLinks.length) return; // Exit if no story links found
+
+        storyLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const sourceFile = this.getAttribute('data-source');
+                storyContent.innerHTML = '<p>Loading story...</p>';
+
+                fetch(sourceFile)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`File not found. Check the path in the data-source attribute.`);
+                        }
+                        return response.text();
+                    })
+                    .then(text => {
+                        storyContent.textContent = text;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching the story:', error);
+                        storyContent.innerHTML = `<p style="color: red;">Failed to load story. ${error.message}</p>`;
+                    });
+            });
+        });
     }
 
-    const storyLinks = document.querySelectorAll('.story-link');
-    const storyContent = document.getElementById('story-content');
+    // --- Function for the Home Page (Updates Section) ---
+    function handleHomePage() {
+        const commitList = document.getElementById('commit-history');
+        if (!commitList) return; // Exit if the commit list element isn't on this page
 
-    // Tambahkan event listener untuk setiap link cerita
-    storyLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Mencegah link melakukan navigasi default
-            event.preventDefault(); 
+        // --- CONFIGURATION: CHANGE THESE VALUES ---
+        const username = 'Rxdsavt'; // <-- Replace with your GitHub username
+        const repo = 'rxdsavt.github.io'; // <-- Replace with your repository name
+        // -----------------------------------------
 
-            // Ambil path file dari atribut 'data-source'
-            const sourceFile = this.getAttribute('data-source');
-            
-            // Tampilkan pesan loading
-            storyContent.innerHTML = '<p>Loading Story...</p>';
+        const apiUrl = `https://api.github.com/repos/Rxdsavt/rxdsavt.github.io/commits`;
 
-            // Gunakan Fetch API untuk mengambil konten file .txt
-            fetch(sourceFile)
-                .then(response => {
-                    // Cek jika file tidak ditemukan (error 404)
-                    if (!response.ok) {
-                        throw new Error('File missing, lmao!');
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    // Tampilkan teks dari file ke dalam area konten
-                    storyContent.textContent = text;
-                })
-                .catch(error => {
-                    // Tampilkan pesan error jika gagal mengambil file
-                    console.error('Error fetching the story:', error);
-                    storyContent.innerHTML = `<p style="color: red;">Dumbass forgot to place the story in the right path.</p>`;
-                });
-        });
-    });
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(commits => {
+                commitList.innerHTML = ''; // Clear the "Loading..." message
+                
+                // Display the latest 3 commits
+                for (let i = 0; i < commits.length && i < 3; i++) {
+                    const commit = commits[i];
+                    // Get only the first line of the commit message (the title)
+                    const commitMessage = commit.commit.message.split('\n')[0]; 
+                    const commitDate = new Date(commit.commit.author.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <span class="commit-date">${commitDate}</span>
+                        <p class="commit-message">${commitMessage}</p>
+                    `;
+                    commitList.appendChild(listItem);
+                }
+            })
+            .catch(error => {
+                console.error('Failed to fetch commits:', error);
+                commitList.innerHTML = '<li>Could not load updates at this time.</li>';
+            });
+    }
+
+    // --- SCRIPT ROUTER ---
+    // Check which page we are on and run the corresponding function
+    if (document.querySelector('.story-list')) {
+        handleWritingsPage();
+    }
+    if (document.getElementById('commit-history')) {
+        handleHomePage();
+    }
 });

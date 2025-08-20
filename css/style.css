@@ -1,6 +1,5 @@
 /* Pengaturan Dasar dan Font */
 body {
-    /* MENGGANTI FONT UTAMA KE COURIER PRIME */
     font-family: 'Courier Prime', monospace;
     background-color: #fdfdfd;
     color: #333;
@@ -158,9 +157,56 @@ main h2 {
     padding: 20px 30px;
     min-height: 300px;
     white-space: pre-wrap;
-    /* MENGGANTI FONT CERITA KE TIMES NEW ROMAN */
     font-family: 'Times New Roman', Times, serif;
     color: #222;
+}
+
+/* NEW: UPDATES SECTION STYLING */
+#updates h2 {
+    margin-top: 60px; /* More space before this section */
+}
+
+#commit-history {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-left: 2px solid #eee;
+}
+
+#commit-history li {
+    padding: 15px 25px;
+    position: relative;
+}
+
+/* The timeline circle */
+#commit-history li::before {
+    content: '';
+    position: absolute;
+    left: -9px; /* ( (14px circle width / 2) + 2px border width ) */
+    top: 22px;
+    width: 14px;
+    height: 14px;
+    background-color: #fdfdfd;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#commit-history li:hover::before {
+    background-color: #333;
+    border-color: #333;
+}
+
+.commit-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.commit-message {
+    margin: 0;
+    font-weight: bold;
 }
 
 /* Footer */
