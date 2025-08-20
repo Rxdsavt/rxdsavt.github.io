@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const sourceFile = this.getAttribute('data-source');
             
             // Tampilkan pesan loading
-            storyContent.innerHTML = '<p>Memuat cerita...</p>';
+            storyContent.innerHTML = '<p>Loading Story...</p>';
 
             // Gunakan Fetch API untuk mengambil konten file .txt
             fetch(sourceFile)
                 .then(response => {
                     // Cek jika file tidak ditemukan (error 404)
                     if (!response.ok) {
-                        throw new Error('File tidak ditemukan. Pastikan path di atribut data-source benar.');
+                        throw new Error('File missing, lmao!');
                     }
                     return response.text();
                 })
